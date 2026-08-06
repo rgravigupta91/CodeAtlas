@@ -1,0 +1,13 @@
+flowchart TD
+    A[Start] -->|Input| B(User Input: Jira/Code? existing/new?)
+    B --> C{Let me Think}
+    B --> |If existing| Z{Fetch Old Diagram}
+    Z --> C
+    C -->|Code| D[Fetch code and call LLM for components]
+    C -->|Jira| E[Fetch Jira EPIC and call LLM for components]
+    D --> |Call LLM| F[Call LLM to fetch components]
+    E --> F
+    F --> G{User Okay?}
+    G --> |Needs Improvement| F
+    G --> |Good to Go| H[Push to git]
+    H--> I[END]
