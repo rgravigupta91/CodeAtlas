@@ -1,2 +1,8 @@
 .env
 venv/
+Chatbot.db
+Chatbot.db-shm
+Chatbot.db-wal
+Diagrams/
+__pycache__/
+*.pyc

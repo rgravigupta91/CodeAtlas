@@ -2,7 +2,7 @@ import random, subprocess, tempfile, os, base64, uuid
 from langchain_core.tools import tool
 import streamlit as st
 
-OUTPUT_DIR = "../Diagrams"
+OUTPUT_DIR = "./Diagrams"
 @tool
 def render_mermaid(code: str, fmt: str = "png") -> bytes:
     """
